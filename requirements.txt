@@ -1,0 +1,9 @@
+gunicorn
+numpy
+flask
+joblib
+scikit-learn
+keras
+random
+nltk
+json
