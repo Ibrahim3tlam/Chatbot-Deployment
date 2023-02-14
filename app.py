@@ -68,11 +68,9 @@ def process(text):
     res = getResponse(ints, data)
     return res
 
+
+
 app = Flask(__name__)
-
-
-
-
 
 @app.route('/')
 def index():
