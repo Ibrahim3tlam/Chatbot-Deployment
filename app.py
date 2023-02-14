@@ -8,8 +8,15 @@ import joblib
 from keras.models import load_model
 
 model = load_model('chatbot_model.h5')
-with open("intents.json", encoding="utf-8") as file:  #load the json file content
+import os
+
+# Get the absolute path of the current directory
+base_dir = os.path.abspath(os.path.dirname(__file__))
+
+# Load the intents.json file using an absolute path
+with open(os.path.join(base_dir, "intents.json"), encoding="utf-8") as file:
     data = json.load(file)
+
 
 classes = joblib.load('classes.pkl')
 words = joblib.load('words.pkl')
