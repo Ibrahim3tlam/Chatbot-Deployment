@@ -4,6 +4,7 @@ flask
 joblib
 scikit-learn
 keras
-random
+
 nltk
 json
+random
