@@ -3,6 +3,6 @@ gunicorn==20.1.0
 h5py==3.7.0
 joblib==1.2.0
 keras==2.11.0
-nltk==3.8.1
+nltk
 numpy
 tensorflow==2.11.0
