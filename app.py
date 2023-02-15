@@ -85,7 +85,7 @@ def index():
 def get_bot_reponse():
     userText = request.args.get('msg')
     results, tag = process(userText)
-    return str(results)
+    return 'good'
 
 
 if __name__ == '__main__':
