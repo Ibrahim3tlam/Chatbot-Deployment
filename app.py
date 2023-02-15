@@ -1,6 +1,6 @@
 import nltk
 from nltk.stem.isri import ISRIStemmer
-import json
+
 import numpy as np
 import random
 from flask import Flask, render_template, request
@@ -8,15 +8,10 @@ import joblib
 from keras.models import load_model
 
 model = load_model('chatbot_model.h5')
-import os
 
-# Get the absolute path of the current directory
-base_dir = os.path.abspath(os.path.dirname(__file__))
+## Load the data object from the pickled file
 
-# Load the intents.json file using an absolute path
-with open(os.path.join(base_dir, "intents.json"), encoding="utf-8") as file:
-    data = json.load(file)
-
+data =joblib.load('intents.pkl')
 
 classes = joblib.load('classes.pkl')
 words = joblib.load('words.pkl')
