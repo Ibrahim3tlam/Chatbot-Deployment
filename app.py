@@ -1,6 +1,7 @@
 import nltk
 from nltk.stem.isri import ISRIStemmer
 
+nltk.download('punkt')
 import numpy as np
 import random
 from flask import Flask, render_template, request
@@ -85,4 +86,4 @@ def get_bot_reponse():
     return str(results)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=4000)
+    app.run(debug=True)
