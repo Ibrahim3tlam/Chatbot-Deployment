@@ -1,0 +1,8 @@
+flask
+gunicorn
+h5py
+joblib
+keras
+nltk
+numpy
+tensorflow
